@@ -9,6 +9,13 @@
   - image: picture of product (url string)
 */
 
+const products = [
+  {name: "Cherry", price: 2.99, quantity: 0, productId: 101, url: "//starter/src/images/cherry.jpg"},
+  {name: "Orange", price: 1.49, quantity: 0, productId: 102, url: "//starter/src/images/orange.jpg"},
+  {name: "Strawberry", price: 1.99, quantity: 0, productId: 103, url: "//starter/src/images/strawberry.jpg"}
+];
+
+console.log(products);
 /* Images provided in /images folder. All images from Unsplash.com
   - cherry.jpg by Mae Mu
   - orange.jpg by Mae Mu
@@ -16,6 +23,8 @@
 */
 
 /* Declare an empty array named cart to hold the items in the cart */
+
+const cart = [];
 
 /* Create a function named addProductToCart that takes in the product productId as an argument
   - addProductToCart should get the correct product based on the productId
@@ -56,21 +65,21 @@
 
 
 /* The following is for running unit tests. 
-   To fully complete this project, it is expected that all tests pass.
-   Run the following command in terminal to run tests
-   npm run test
+  To fully complete this project, it is expected that all tests pass.
+  Run the following command in terminal to run tests
+  npm run test
 */
 
-module.exports = {
-   products,
-   cart,
-   addProductToCart,
-   increaseQuantity,
-   decreaseQuantity,
-   removeProductFromCart,
-   cartTotal,
-   pay, 
-   emptyCart,
-   /* Uncomment the following line if completing the currency converter bonus */
+/* module.exports = {
+  products,
+  cart,
+  addProductToCart,
+  increaseQuantity,
+  decreaseQuantity,
+  removeProductFromCart,
+  cartTotal,
+  pay, 
+  emptyCart,
+   // Uncomment the following line if completing the currency converter bonus
    // currency
-}
+} */
