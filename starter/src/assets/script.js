@@ -10,12 +10,11 @@
 */
 
 const products = [
-  {name: "Cherry", price: 2.99, quantity: 0, productId: 101, url: "//starter/src/images/cherry.jpg"},
-  {name: "Orange", price: 1.49, quantity: 0, productId: 102, url: "//starter/src/images/orange.jpg"},
-  {name: "Strawberry", price: 1.99, quantity: 0, productId: 103, url: "//starter/src/images/strawberry.jpg"}
+  {name: "Cherry", price: 5, quantity: 0, productId: 1, image: "../images/cherry.jpg"},
+  {name: "Orange", price: 10, quantity: 0, productId: 2, image: "../images/orange.jpg"},
+  {name: "Strawberry", price: 15, quantity: 0, productId: 3, image: "../images/strawberry.jpg"}
 ];
 
-console.log(products);
 /* Images provided in /images folder. All images from Unsplash.com
   - cherry.jpg by Mae Mu
   - orange.jpg by Mae Mu
@@ -31,6 +30,19 @@ const cart = [];
   - addProductToCart should then increase the product's quantity
   - if the product is not already in the cart, add it to the cart
 */
+
+function addProductToCart(productId) {
+  products.forEach(product => {
+    if (productId === product.productId) {
+      if (!cart.includes('productId')) {
+        cart.push(product);
+      };
+      product.quantity = product.quantity + 1;
+    };
+  });
+};
+
+addProductToCart(2);
 
 /* Create a function named increaseQuantity that takes in the productId as an argument
   - increaseQuantity should get the correct product based on the productId
@@ -70,16 +82,16 @@ const cart = [];
   npm run test
 */
 
-/* module.exports = {
+module.exports = {
   products,
   cart,
   addProductToCart,
-  increaseQuantity,
+  /* increaseQuantity,
   decreaseQuantity,
   removeProductFromCart,
   cartTotal,
   pay, 
-  emptyCart,
+  emptyCart, */
    // Uncomment the following line if completing the currency converter bonus
    // currency
-} */
+}
